@@ -34,13 +34,15 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") { but can crash
         if let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") {
-            cell.textLabel?.text = "Hello"
+            let itemName = items[indexPath.row].name
+            
+            cell.textLabel?.text = itemName
             return cell
         } else {
             return UITableViewCell()
