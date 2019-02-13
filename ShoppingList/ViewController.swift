@@ -22,14 +22,19 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         tableView.dataSource = self
         
-        let item1 = Item(name: "Milk")
+        let item1 = Item(name: "Milk", quantity: 2)
         let item2 = Item(name: "Blueberries")
-        let item3 = Item(name: "Cosmic Brownies")
+        let item3 = Item(name: "Cosmic Brownies", quantity: 100)
         
         items = [item1, item2, item3]
     }
 
     @IBAction func addItem(_ sender: Any) {
+        if let newItemName = newItemTextField.text, newItemName != "" {
+            let newItem = Item(name: newItemName)
+            items.append(newItem)
+            tableView.reloadData()
+        }
         
     }
     
