@@ -15,9 +15,18 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var items:[Item] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        
+        let item1 = Item(name: "Milk")
+        let item2 = Item(name: "Blueberries")
+        let item3 = Item(name: "Cosmic Brownies")
+        
+        items = [item1, item2, item3]
     }
 
     @IBAction func addItem(_ sender: Any) {
