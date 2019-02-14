@@ -45,8 +45,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") { but can crash
         if let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") {
+            let itemQuantity = items[indexPath.row].quantity
             let itemName = items[indexPath.row].name
-            
+            cell.detailTextLabel?.text = "Quantity: \(itemQuantity)"
             cell.textLabel?.text = itemName
             return cell
         } else {
