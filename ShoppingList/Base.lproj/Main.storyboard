@@ -76,6 +76,7 @@
                     <connections>
                         <outlet property="newItemTextField" destination="y6t-CS-7Wv" id="Iia-Ag-KZG"/>
                         <outlet property="tableView" destination="IfI-uo-BKv" id="cSB-zX-zhn"/>
+                        <segue destination="lYw-rU-6yp" kind="show" id="yd3-ld-9SV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -91,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gce-UN-cTS">
-                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <rect key="frame" x="17" y="324" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -101,6 +102,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ZQE-Lr-MjP"/>
                     </view>
+                    <connections>
+                        <outlet property="quantityLabel" destination="gce-UN-cTS" id="bB7-hq-xFQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9P-Zm-5Qh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
